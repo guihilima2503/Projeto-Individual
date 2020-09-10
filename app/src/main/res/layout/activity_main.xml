@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Digite o INSS"
+        android:textSize="30sp"
+        android:id="@+id/et_inss"
+        android:inputType="numberDecimal"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Digite o IRRF"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/et_inss"
+        android:id="@+id/et_irrf"
+        android:inputType="numberDecimal"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Digite o VR"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/et_irrf"
+        android:id="@+id/et_vr"
+        android:inputType="numberDecimal"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Digite o plano de saude"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/et_vr"
+        android:id="@+id/et_saude"
+        android:inputType="numberDecimal"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Digite o salario"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/et_saude"
+        android:id="@+id/et_salario"
+        android:inputType="numberDecimal"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Calcular descontos"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/et_salario"
+        android:id="@+id/button_CalcRenda"
+        android:onClick="CalcRenda"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:textColor="#ff0000"
+        android:id="@+id/edite_resultadoPorcentagem"
+        app:layout_constraintTop_toBottomOf="@+id/button_CalcRenda"
+        android:layout_marginTop="25dp"
+        android:visibility="visible"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:textColor="#0000ff"
+        android:id="@+id/edite_resultadoImposto"
+        app:layout_constraintTop_toBottomOf="@+id/edite_resultadoPorcentagem"
+        android:layout_marginTop="25dp"
+        android:visibility="visible"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:textColor="#008000"
+        android:id="@+id/edite_resultado"
+        app:layout_constraintTop_toBottomOf="@+id/edite_resultadoImposto"
+        android:layout_marginTop="25dp"
+        android:visibility="visible"
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
